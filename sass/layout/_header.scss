@@ -1,0 +1,18 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  
+  .header__logo {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 197px;
+    font-size: 36px;
+    font-style: italic;
+  }
