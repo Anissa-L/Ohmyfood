@@ -1,0 +1,43 @@
+.fonctionnement {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Shrikhand";
+    padding-left: 20px;
+    padding-top: 48px;
+    padding-bottom: 26px;
+  }
+
+  &__filtre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 68px;
+  }
+
+  &__filtre__filtre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    width: 80%;
+    border: 0px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f6f6f6;
+    gap: 23px;
+  }
+
+  &__icone-couleur {
+    color: #9356dc;
+  }
+}

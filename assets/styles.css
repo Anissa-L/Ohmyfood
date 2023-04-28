@@ -238,7 +238,7 @@ p {
   padding-bottom: 26px;
 }
 
-.section-filtre {
+.fonctionnement__filtre {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -247,7 +247,7 @@ p {
   margin-bottom: 68px;
 }
 
-.section-filtre__filtre {
+.fonctionnement__filtre__filtre {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,7 +260,7 @@ p {
   gap: 23px;
 }
 
-.icone-couleur{
+.fonctionnement__icone-couleur{
    color: #9356dc;
    
 }
