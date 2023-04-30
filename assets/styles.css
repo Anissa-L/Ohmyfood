@@ -238,6 +238,19 @@ h1 {
   padding-bottom: 26px;
 }
 
+.fonctionnement__filtre-block{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.fonctionnement__filtre-number{
+  height: 24px;
+width: 24px;
+border-radius: 0;
+
+}
+
 .fonctionnement__section-filtre {
   display: flex;
   flex-direction: column;
@@ -352,6 +365,8 @@ h1 {
   align-items: center;
   padding-bottom: 24px;
 }
+
+/*footer*/
 
 .footer {
   display: flex;
