@@ -238,17 +238,18 @@ h1 {
   padding-bottom: 26px;
 }
 
-.fonctionnement__filtre-block{
-  display: flex;
-  flex-direction: row;
-}
-
-
-.fonctionnement__filtre-number{
+.fonctionnement__filtre-number {
   height: 24px;
-width: 24px;
-border-radius: 0;
-
+  width: 24px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  color: white;
+  position: relative;
+  top: 73px;
+  right: 170px; /*problème largeur*/
 }
 
 .fonctionnement__section-filtre {
@@ -334,7 +335,7 @@ border-radius: 0;
   position: absolute;
   z-index: 1;
   top: 15px;
-  left: 210px ;
+  left: 210px; /*problème largeur*/
   margin: 0px 50px;
 }
 
@@ -357,7 +358,7 @@ border-radius: 0;
 
 .restaurant__card-title {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: bold; /*ne se met pas en gras*/
 }
 
 .restaurant__card-rating {
@@ -379,7 +380,7 @@ border-radius: 0;
 .footer__logo {
   height: 27px;
   width: 137px;
-  fill: #ffffff;
+  fill: #ffffff; /*logo blanc?*/
 }
 .footer__section-link {
   display: flex;
@@ -388,7 +389,7 @@ border-radius: 0;
 }
 
 .footer__icon {
-  display: flex;
+  display: flex; /*problème icon*/
   flex-direction: row;
 }
 

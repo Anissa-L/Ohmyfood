@@ -15,6 +15,20 @@
     padding-bottom: 26px;
   }
 
+  &__filtre-number {
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+    color: white;
+    position: relative;
+    top: 73px;
+    right: 170px; /*problème largeur*/
+  }
+
   &__section-filtre {
     display: flex;
     flex-direction: column;
