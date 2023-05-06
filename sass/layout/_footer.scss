@@ -5,25 +5,31 @@
     padding: 22px 0 22px 25px;
     gap: 16px;
 
-    &__logo {
-        height: 27px;
-        width: 137px;
-        fill: $fourth-color;
-      }
-    
     &__section-link {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    
     &__icon {
-        display: flex;
-        flex-direction: row;
-      }
+      display: flex; 
+      flex-direction: row;
+      gap: 10px;
+    }
+    &__icon-color{
+      color: #ffffff;
+    }
     
     &__link {
-        font-size: 16px;
-        color: $fourth-color;
-      }
+      font-size: 16px;
+      color: #ffffff;
+    }
+    &__title{
+    font-family: Shrikhand;
+    font-size: 26px;
+    font-style: italic;
+    color: #ffffff;
+    font-weight: bold;
+    }
   }
 
