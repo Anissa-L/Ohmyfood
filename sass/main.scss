@@ -1,4 +1,8 @@
 
+@import "./utils/fonctions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/variables";
 @import "./base/body";
 @import "./base/bout-de-code";
 @import "./base/couleur";
@@ -11,8 +15,3 @@
 @import "./pages/page-accueil/section-location";
 @import "./pages/page-accueil/section-fonctionnement";
 @import "./pages/page-accueil/section-restaurant";
-@import "./utils/fonctions";
-@import "./utils/mixins";
-@import "./utils/placeholders";
-@import "./utils/variables";
-
