@@ -3,6 +3,11 @@
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+
+  @media (min-width: 1025px){
+    padding-left: 90px;
+    padding-right: 90px;
+  }
   &__title {
     display: flex;
     justify-content: space-between;
@@ -35,6 +40,13 @@
     align-items: center;
     gap: 24px;
     margin-bottom: 68px;
+    
+    @media (min-width: 1025px){
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+    }
   }
 
   &__filtre {
