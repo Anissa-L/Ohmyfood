@@ -146,6 +146,7 @@ text {
   height: 50px;
   width: 45%;
   color: #ffffff;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,7 +163,7 @@ text {
 }
 @media (min-width: 768px) {
   .boutton-accueil__explore {
-    width: 20%;
+    width: 218px;
   }
 }
 
@@ -185,7 +186,6 @@ text {
 h1,
 h2 {
   font-size: 24px;
-  font-family: "Shrikhand";
   font-weight: bold;
 }
 
@@ -288,12 +288,17 @@ p {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding: 48px 20px 68px 60px;
+}
+@media (min-width: 768px) {
+  .fonctionnement {
+    padding-left: 60px;
+    padding-right: 55px;
+  }
 }
 @media (min-width: 1025px) {
   .fonctionnement {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding: 50px 150px 50px 180px;
   }
 }
 .fonctionnement__title {
@@ -302,7 +307,6 @@ p {
   align-items: center;
   font-size: 24px;
   font-weight: bold;
-  padding-top: 48px;
   padding-bottom: 26px;
 }
 .fonctionnement__filtre-number {
@@ -323,9 +327,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 24px;
-  margin-bottom: 68px;
+}
+@media (min-width: 768px) {
+  .fonctionnement__section-filtre {
+    display: flex;
+    flex-direction: row;
+  }
 }
 @media (min-width: 1025px) {
   .fonctionnement__section-filtre {
@@ -337,7 +345,7 @@ p {
 }
 .fonctionnement__filtre {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 72px;
   width: 80%;
@@ -345,9 +353,22 @@ p {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   background-color: #f6f6f6;
-  gap: 23px;
+  gap: 26px;
+  padding-left: 40px;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .fonctionnement__filtre {
+    gap: 15px;
+    padding-left: 30px;
+  }
+}
+@media (min-width: 1025px) {
+  .fonctionnement__filtre {
+    gap: 20px;
+    padding-left: 30px;
+  }
 }
 .fonctionnement__icone-couleur {
   color: #9356dc;
@@ -357,20 +378,29 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 33px;
+  padding: 59px 33px 66px 33px;
+}
+@media (min-width: 768px) {
+  .restaurant {
+    padding: 30px 90px;
+  }
+}
+@media (min-width: 1025px) {
+  .restaurant {
+    padding: 30px 175px;
+  }
 }
 .restaurant__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 59px;
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 24px;
 }
 @media (min-width: 768px) {
   .restaurant__title {
-    padding-left: 55px;
+    margin-top: 0px;
   }
 }
 .restaurant__section-cards {
@@ -378,15 +408,15 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-bottom: 66px;
 }
 @media (min-width: 768px) {
   .restaurant__section-cards {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 0;
+    row-gap: 50px;
   }
 }
 .restaurant__card-link {
@@ -509,62 +539,99 @@ p {
   }
 }
 
-.animation {
-  height: 100vh;
+/*.animation {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(#ff79da, #9356dc);
-}
-.animation .loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 30px 30px 30px;
-  border-radius: 15px;
-  background-color: white;
-}
-.animation .loader__animation {
-  display: flex;
-  margin-bottom: 10px;
-}
-.animation .loader__ball {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: #9356dc;
-  animation: cercle 1s infinite;
-}
-.animation .loader__ball-pink {
-  background-color: #ff79da;
-}
-.animation .loader__ball-green {
-  background-color: #99e2d0;
-}
-.animation .loader__ball:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.animation .loader__ball:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.animation .loader__ball:not(:last-child) {
-  margin-right: 10px;
-}
-.animation .loader__chargement {
-  font-size: 20px;
-  font-family: "Shrikhand";
+
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient($second-color, $main-color);
+
+  animation: fin-loader 0.45s linear both;
+  animation-delay: 3000ms;
+
+  .loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px 30px 30px;
+    border-radius: 15px;
+    background-color: white;
+
+    &__animation {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    &__ball {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: $main-color;
+      animation: cercle 1s infinite;
+
+      &-pink {
+        background-color: $second-color;
+      }
+
+      &-green {
+        background-color: #99e2d0;
+      }
+    }
+
+    &__ball:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    &__ball:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    &__ball:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &__chargement {
+      font-size: 20px;
+      font-family: "Shrikhand";
+    }
+  }
 }
 
 @keyframes cercle {
   0% {
     transform: translateY(-100%);
   }
+
   50% {
     transform: translateY(0%);
   }
+
   100% {
     transform: translateY(-100%);
   }
 }
+
+
+
+
+
+@keyframes fin-loader {
+  0% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+}*/
 
 /*# sourceMappingURL=style.css.map */
