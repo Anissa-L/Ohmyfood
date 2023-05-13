@@ -2,16 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 59px 33px 66px 33px ;
+  padding: 59px 33px 66px 33px;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     padding: 30px 90px;
   }
 
-  @media (min-width: 1025px){
-    padding:30px 175px;
-    
-  }  
+  @media (min-width: 1025px) {
+    padding: 30px 175px;
+  }
 
   &__title {
     display: flex;
@@ -21,9 +20,8 @@
     font-weight: bold;
     font-size: 24px;
 
-    @media (min-width: 768px){
-      margin-top:0px;
-
+    @media (min-width: 768px) {
+      margin-top: 0px;
     }
   }
 
@@ -32,7 +30,6 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    
 
     @media (min-width: 768px) {
       display: flex;
@@ -46,10 +43,6 @@
 
   &__card-link {
     width: 100%;
-    @media (min-width: 768px) {
-      width: 44%; 
-      display: flex;
-    }
   }
 
   &__card {
@@ -104,71 +97,45 @@
     font-weight: bold;
   }
 
-  &__card-rating-1 {
-    /*PROBLEME DE POSITION*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 3;
-    bottom: -500px;
-    right: 68px;
-  }
-  &__card-rating-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 3;
-    bottom: -905px;
-    right: 68px;
-  }
+  &__heart {
+    width: 100%;
+    position: relative;
+    @media (min-width: 768px) {
+      width: 47%;
+    }
 
-  &__card-rating-3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 3;
-    bottom: -1172px;
-    right: 68px;
-  }
-
-  &__card-rating-4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 3;
-    bottom: -1443px;
-    right: 68px;
+    &__heart-icon {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+    }
   }
 
   &__icon {
+    cursor: pointer;
     font-weight: 100;
     font-size: 20px;
-    border: 1px;
-  }
-
-  &__icon-full {
-    font-size: 20px;
-    position: absolute;
-    z-index: 3;
-    opacity: 0;
-    cursor: pointer;
-    color: linear-gradient($second-color, $main-color);/* pas de couleur*/ 
-    transition: opacity 400ms;
+    -webkit-text-stroke-width: 0.01px;
+    transition: 400ms;
 
     &:active {
-       opacity :1;
-      animation-fill-mode: forwards;/*ne fonctionne pas */
+      font-weight: 600;
+      content: "";
+      background-image: linear-gradient($main-color, $second-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
-      
-  @media (min-width: 1025px) {
-    &:hover {
-      opacity: 1;
-      -webkit-background-clip: text;/*ne fonctionne pas*/
+
+    @media (min-width: 1025px) {
+      &:hover {
+        font-weight: 600;
+        content: "";
+        background-image: linear-gradient($main-color, $second-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
     }
-  }
   }
 }

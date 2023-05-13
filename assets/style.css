@@ -422,12 +422,6 @@ p {
 .restaurant__card-link {
   width: 100%;
 }
-@media (min-width: 768px) {
-  .restaurant__card-link {
-    width: 44%;
-    display: flex;
-  }
-}
 .restaurant__card {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -477,150 +471,110 @@ p {
   font-size: 18px;
   font-weight: bold;
 }
-.restaurant__card-rating-1 {
-  /*PROBLEME DE POSITION*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 3;
-  bottom: -500px;
-  right: 68px;
+.restaurant__heart {
+  width: 100%;
+  position: relative;
 }
-.restaurant__card-rating-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 3;
-  bottom: -905px;
-  right: 68px;
+@media (min-width: 768px) {
+  .restaurant__heart {
+    width: 47%;
+  }
 }
-.restaurant__card-rating-3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.restaurant__heart__heart-icon {
   position: absolute;
-  z-index: 3;
-  bottom: -1172px;
-  right: 68px;
-}
-.restaurant__card-rating-4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 3;
-  bottom: -1443px;
-  right: 68px;
+  bottom: 30px;
+  right: 30px;
 }
 .restaurant__icon {
+  cursor: pointer;
   font-weight: 100;
   font-size: 20px;
-  border: 1px;
+  -webkit-text-stroke-width: 0.01px;
+  transition: 400ms;
 }
-.restaurant__icon-full {
-  font-size: 20px;
-  position: absolute;
-  z-index: 3;
-  opacity: 0;
-  cursor: pointer;
-  color: linear-gradient(#ff79da, #9356dc); /* pas de couleur*/
-  transition: opacity 400ms;
-}
-.restaurant__icon-full:active {
-  opacity: 1;
-  animation-fill-mode: forwards; /*ne fonctionne pas */
+.restaurant__icon:active {
+  font-weight: 600;
+  content: "";
+  background-image: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 @media (min-width: 1025px) {
-  .restaurant__icon-full:hover {
-    opacity: 1;
-    -webkit-background-clip: text; /*ne fonctionne pas*/
+  .restaurant__icon:hover {
+    font-weight: 600;
+    content: "";
+    background-image: linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }
 
-/*.animation {
+.animation {
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient($second-color, $main-color);
-
+  background-image: linear-gradient(#ff79da, #9356dc);
   animation: fin-loader 0.45s linear both;
   animation-delay: 3000ms;
-
-  .loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 30px 30px 30px;
-    border-radius: 15px;
-    background-color: white;
-
-    &__animation {
-      display: flex;
-      margin-bottom: 10px;
-    }
-
-    &__ball {
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background-color: $main-color;
-      animation: cercle 1s infinite;
-
-      &-pink {
-        background-color: $second-color;
-      }
-
-      &-green {
-        background-color: #99e2d0;
-      }
-    }
-
-    &__ball:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-
-    &__ball:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-
-    &__ball:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    &__chargement {
-      font-size: 20px;
-      font-family: "Shrikhand";
-    }
-  }
+}
+.animation .loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px 30px 30px;
+  border-radius: 15px;
+  background-color: white;
+}
+.animation .loader__animation {
+  display: flex;
+  margin-bottom: 10px;
+}
+.animation .loader__ball {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  animation: cercle 1s infinite;
+}
+.animation .loader__ball-pink {
+  background-color: #ff79da;
+}
+.animation .loader__ball-green {
+  background-color: #99e2d0;
+}
+.animation .loader__ball:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.animation .loader__ball:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.animation .loader__ball:not(:last-child) {
+  margin-right: 10px;
+}
+.animation .loader__chargement {
+  font-size: 20px;
+  font-family: "Shrikhand";
 }
 
 @keyframes cercle {
   0% {
     transform: translateY(-100%);
   }
-
   50% {
     transform: translateY(0%);
   }
-
   100% {
     transform: translateY(-100%);
   }
 }
-
-
-
-
-
 @keyframes fin-loader {
   0% {
     transform: rotateX(0deg);
@@ -632,6 +586,6 @@ p {
     transform-origin: top;
     opacity: 0;
   }
-}*/
+}
 
 /*# sourceMappingURL=style.css.map */
