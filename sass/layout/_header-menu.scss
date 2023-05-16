@@ -1,0 +1,25 @@
+.header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    background-color: $fourth-color;
+    position: relative;
+    
+    &-icon{
+      position: absolute;
+      font-size: 25px;
+      left: 23px;
+      bottom: 19px;
+  }
+  
+    &-logo {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      width: 197px;
+      font-size: 36px;
+      font-style: italic;
+    }
+
+  }

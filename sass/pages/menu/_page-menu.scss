@@ -1,0 +1,121 @@
+.restaurant__menu {
+  background: $fifth-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 13px 40px 13px;
+  border-radius: 40px;
+  width: 100%;
+  position: absolute;
+  top: 300px;
+
+  @media (min-width:768px){
+    padding: 51px 210px 40px 210px;
+    width: 80%;
+    left: 10%;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    &-tle {
+      font-family: "Shrikhand";
+      font-style: italic;
+      font-weight: bold;
+      font-size: 35px;
+    }
+    @media (min-width:768px){
+     justify-content: center;
+    }
+  }
+
+  &-icon {
+    margin-left: 35px;
+    margin-top: 13px;
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 20px;
+    -webkit-text-stroke-width: 0.01px;
+    transition: 400ms;
+
+    &:active {
+      font-weight: 600;
+      content: "";
+      background-image: linear-gradient($main-color, $second-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        font-weight: 600;
+        content: "";
+        background-image: linear-gradient($main-color, $second-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
+
+.menu__card-img {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.menu__dish-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.menu__dish-border {
+  width: 40px;
+  border-bottom: 3px solid #99e2d0;
+  margin-bottom: 12px;
+}
+
+.menu__section-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.menu__card-link {
+  width: 100%;
+}
+
+.menu__card {
+  background: $fourth-color;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  height: 69px;
+  width: 100%;
+  padding: 12px 16px 12px 15px;
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  &-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &-h3{
+        font-size: 18px;
+    }
+    &-pr{
+        font-size: 15px;
+    }
+  }
+ &-price{
+    margin-top: 25px;
+ }
+}
+
+
