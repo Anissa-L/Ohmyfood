@@ -35,15 +35,19 @@
           class="header__menu-logo"
         />
       </header>
+      <main class="main__menu">
       <img
         class="menu__card-img"
         src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
         alt="Image d'une assiete d'un restaurant gastronomique"
       />
-      <main class="restaurant__menu">
+      <div class="restaurant__menu">
         <div class="restaurant__menu-title">
           <h1 class="restaurant__menu-title-tle">À la française</h1>
-          <i class="restaurant__menu-icon fa-thin fa-solid fa-heart"></i>
+          <div class="restaurant__menu-icon">
+          <i class="restaurant__menu-icon-empty fa-solid fa-light fa-heart"></i>
+          <i class="restaurant__menu-icon-full fa-solid fa-light fa-heart"></i>
+        </div>
         </div>
         <section class="menu">
           <article class="menu__dish menu__dish-anim-1">
@@ -191,6 +195,7 @@
               Commander
             </button>
           </div>
+      </div>
       </main>
       <footer>
         <div class="footer">
