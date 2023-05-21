@@ -487,88 +487,70 @@ text {
   opacity: 1;
 }
 
-/*.animation {
+.animation {
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient($second-color, $main-color);
-
+  background-image: linear-gradient(#ff79da, #9356dc);
   animation: fin-loader 0.45s linear both;
   animation-delay: 3000ms;
-
-  .loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 30px 30px 30px;
-    border-radius: 15px;
-    background-color: white;
-
-    &__animation {
-      display: flex;
-      margin-bottom: 10px;
-    }
-
-    &__ball {
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      background-color: $main-color;
-      animation: cercle 1s infinite;
-
-      &-pink {
-        background-color: $second-color;
-      }
-
-      &-green {
-        background-color: #99e2d0;
-      }
-    }
-
-    &__ball:nth-child(2) {
-      animation-delay: 0.1s;
-    }
-
-    &__ball:nth-child(3) {
-      animation-delay: 0.2s;
-    }
-
-    &__ball:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    &__chargement {
-      font-size: 20px;
-      font-family: "Shrikhand";
-    }
-  }
+}
+.animation .loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px 30px 30px;
+  border-radius: 15px;
+  background-color: white;
+}
+.animation .loader__animation {
+  display: flex;
+  margin-bottom: 10px;
+}
+.animation .loader__ball {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  animation: cercle 1s infinite;
+}
+.animation .loader__ball-pink {
+  background-color: #ff79da;
+}
+.animation .loader__ball-green {
+  background-color: #99e2d0;
+}
+.animation .loader__ball:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.animation .loader__ball:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.animation .loader__ball:not(:last-child) {
+  margin-right: 10px;
+}
+.animation .loader__chargement {
+  font-size: 20px;
+  font-family: "Shrikhand";
 }
 
 @keyframes cercle {
   0% {
     transform: translateY(-100%);
   }
-
   50% {
     transform: translateY(0%);
   }
-
   100% {
     transform: translateY(-100%);
   }
 }
-
-
-
-
-
 @keyframes fin-loader {
   0% {
     transform: rotateX(0deg);
@@ -580,7 +562,7 @@ text {
     transform-origin: top;
     opacity: 0;
   }
-}*/
+}
 .main__menu {
   display: flex;
   flex-direction: column;
@@ -743,8 +725,6 @@ text {
   border-radius: 15px;
   height: 69px;
   width: 100%;
-  padding: 12px 16px 12px 15px;
-  position: relative;
   /*
   &-price {
     margin-top: 25px;
@@ -764,11 +744,45 @@ text {
       transform: translateX(-250%);
     }
   }*/
+  /*animation: slidein 1.5s forwards;*/
+  /* &:active {
+     transition-timing-function: ease-in-out;
+     animation: slidein 1.5s forwards;
+   }*/
+  /*transition: transform 1.5s ease-in-out;
+  &:active{
+    content: "";
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index:  2;
+  }*/
+  /*@keyframes slidein {
+    0% {
+      transform: translateX(0%);
+      opacity: 0;
+    }
+
+    50% {
+      transform: translateX(0%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+  }*/
+}
+.menu__card-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .menu__card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 12px 16px 12px 15px;
 }
 .menu__card-txt {
   display: flex;
@@ -785,10 +799,6 @@ text {
   margin-top: 25px;
 }
 .menu__card-anim {
-  position: absolute;
-  /*z-index: -1;*/
-  top: 0;
-  right: -71px;
   border-radius: 0px 15px 15px 0px;
   background: #99e2d0;
   display: flex;
@@ -799,33 +809,6 @@ text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  animation: slidein 1.5s forwards;
-  opacity: 0;
-  /*transition: transform 1.5s ease-in-out;
-  &:active{
-    content: "";
-    transform: translateX(-100%);
-    opacity: 1;
-    z-index:  2;
-  }*/
-}
-.menu__card-anim:active {
-  transition-timing-function: ease-in-out;
-  animation: slidein 1.5s forwards;
-}
-@keyframes slidein {
-  0% {
-    transform: translateX(0%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(0%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-100%);
-    opacity: 1;
-  }
 }
 .menu__card-icon {
   font-size: 20px;
