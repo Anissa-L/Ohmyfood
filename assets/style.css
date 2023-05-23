@@ -725,6 +725,8 @@ text {
   border-radius: 15px;
   height: 69px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .menu__card-content {
   display: flex;
@@ -755,26 +757,21 @@ text {
   justify-content: center;
   align-items: center;
   height: 69px;
-  width: 10%;
-  /*width: 0%;
-  opacity: 0;
-  transition: all 400ms ease-in-out;
-  &:active{
-    opacity: 1;
-    width: 10%;
-  }*/
-  /*overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;*/
+  white-space: nowrap;
+  opacity: 0;
+  width: 1%;
+  transition: all 800ms;
+  animation-fill-mode: forwards;
+}
+.menu__card-anim:hover {
+  width: 10%;
+  opacity: 1;
 }
 .menu__card-icon {
   font-size: 20px;
   color: #ffffff;
-  /*opacity: 0;
-  transition: all 400ms ease-in-out;
-  &:active{
-    opacity: 1;
-  }*/
 }
 
 .boutton-commande {
