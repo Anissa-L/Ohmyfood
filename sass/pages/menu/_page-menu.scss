@@ -171,7 +171,7 @@
   &-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /*justify-content: space-between; FONCTIONNE PAS*/
     
   }
 
@@ -193,6 +193,7 @@
 
   &-price{
     margin-top: 25px;
+    /*margin-left: 60%;*/
   }
  
   &-anim {

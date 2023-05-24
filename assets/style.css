@@ -731,7 +731,7 @@ text {
 .menu__card-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /*justify-content: space-between; FONCTIONNE PAS*/
 }
 .menu__card-txt {
   display: flex;
@@ -749,6 +749,7 @@ text {
 }
 .menu__card-price {
   margin-top: 25px;
+  /*margin-left: 60%;*/
 }
 .menu__card-anim {
   border-radius: 0px 15px 15px 0px;
