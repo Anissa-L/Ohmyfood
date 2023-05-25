@@ -578,7 +578,7 @@ text {
   padding: 32px 13px 40px 13px;
   border-radius: 40px 40px 0px 0px;
   width: 100%;
-  margin-top: 250px;
+  margin-top: 241px;
 }
 @media (min-width: 768px) {
   .restaurant__menu {
@@ -715,10 +715,6 @@ text {
   margin-bottom: 40px;
 }
 
-.menu__card-link {
-  width: 100%;
-}
-
 .menu__card {
   background: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -727,29 +723,41 @@ text {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .menu__card-content {
   display: flex;
   flex-direction: row;
-  /*justify-content: space-between; FONCTIONNE PAS*/
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 15px;
 }
 .menu__card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 12px 0px 12px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__card-txt-h3 {
   font-weight: bold;
   font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__card-txt-pr {
   font-weight: 100;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__card-price {
   margin-top: 25px;
-  /*margin-left: 60%;*/
+  font-weight: bold;
 }
 .menu__card-anim {
   border-radius: 0px 15px 15px 0px;
@@ -758,17 +766,19 @@ text {
   justify-content: center;
   align-items: center;
   height: 69px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   opacity: 0;
   width: 1%;
   transition: all 800ms;
-  animation-fill-mode: forwards;
 }
-.menu__card-anim:hover {
-  width: 10%;
+.menu__card:active .menu__card-anim {
+  width: 70px;
   opacity: 1;
+}
+@media (min-width: 1025px) {
+  .menu__card:hover .menu__card-anim {
+    width: 70px;
+    opacity: 1;
+  }
 }
 .menu__card-icon {
   font-size: 20px;
