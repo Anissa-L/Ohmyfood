@@ -499,7 +499,7 @@ text {
   height: 100vh;
   background-image: linear-gradient(#ff79da, #9356dc);
   animation: fin-loader 0.45s linear both;
-  animation-delay: 3000ms;
+  animation-delay: 3s;
 }
 .animation .loader {
   display: flex;
@@ -770,15 +770,9 @@ text {
   width: 1%;
   transition: all 800ms;
 }
-.menu__card:active .menu__card-anim {
+.menu__card:hover .menu__card-anim {
   width: 70px;
   opacity: 1;
-}
-@media (min-width: 1025px) {
-  .menu__card:hover .menu__card-anim {
-    width: 70px;
-    opacity: 1;
-  }
 }
 .menu__card-icon {
   font-size: 20px;

@@ -215,17 +215,12 @@ width: 100%;
     transition: all 800ms ;
   }
   
-    &:active &-anim{
-      width: 70px;
-      opacity: 1;
-   }
   
-  @media (min-width: 1025px){
     &:hover &-anim{
       width: 70px;
       opacity: 1;
      }
-  }
+  
   
    
   &-icon {
